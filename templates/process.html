@@ -9,17 +9,13 @@
     <h2>画像処理を選択してください</h2>
     <img src="{{ url_for('uploaded_file', filename=filename) }}" width="300">
     <ul>
-        <li><a href="#">拡大縮小・トリミング</a></li>
-        <li><a href="#">濃淡処理</a></li>
-        <li><a href="#">コントラスト変更</a></li>
-        <li><a href="#">ガンマ補正</a></li>
-        <li><a href="#">ネガポジ反転</a></li>
-        <li><a href="#">幾何学変換</a></li>
-        <li><a href="#">マスク処理</a></li>
-        <li><a href="#">2値化処理</a></li>
-        <li><a href="#">モルフォロジー処理</a></li>
-        <li><a href="#">エッジ検出</a></li>
-        <li><a href="#">画像修復</a></li>
+        <li><a href="{{ url_for('process_image', filename=filename, operation='resize') }}">拡大縮小・トリミング</a></li>
+        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='contrast') }}">コントラスト変更</a></li> -->
+        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='gamma') }}">ガンマ補正</a></li> -->
+        <li><a href="{{ url_for('process_image', filename=filename, operation='negative') }}">ネガポジ反転</a></li>
+        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='binarize') }}">2値化処理</a></li> -->
+        <li><a href="{{ url_for('process_image', filename=filename, operation='morphology') }}">モルフォロジー処理</a></li>
+        <li><a href="{{ url_for('process_image', filename=filename, operation='edge') }}">エッジ検出</a></li>
     </ul>
 </body>
 </html>
