@@ -3,13 +3,13 @@ import cv2
 from flask import Flask, render_template, request, redirect, url_for, send_from_directory
 from werkzeug.utils import secure_filename
 from processing.resize import resize_image
-# from processing.contrast import adjust_contrast
-# from processing.gamma import gamma_correction
+from processing.contrast import adjust_contrast
+from processing.gamma import gamma_correction
 from processing.negative import negative_image
-# from processing.binarization import binarize_image
+from processing.binarization import binarize_image
 from processing.morphology import morphology_operation
 from processing.edge_detection import sobel_edge_detection
-# from processing.inpainting import inpaint_image
+from processing.inpainting import inpaint_image
 
 # Flaskアプリの設定
 app = Flask(__name__)

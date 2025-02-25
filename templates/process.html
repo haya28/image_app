@@ -10,10 +10,10 @@
     <img src="{{ url_for('uploaded_file', filename=filename) }}" width="300">
     <ul>
         <li><a href="{{ url_for('process_image', filename=filename, operation='resize') }}">拡大縮小・トリミング</a></li>
-        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='contrast') }}">コントラスト変更</a></li> -->
-        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='gamma') }}">ガンマ補正</a></li> -->
+        <li><a href="{{ url_for('process_image', filename=filename, operation='contrast') }}">コントラスト変更</a></li>
+        <li><a href="{{ url_for('process_image', filename=filename, operation='gamma') }}">ガンマ補正</a></li>
         <li><a href="{{ url_for('process_image', filename=filename, operation='negative') }}">ネガポジ反転</a></li>
-        <!-- <li><a href="{{ url_for('process_image', filename=filename, operation='binarize') }}">2値化処理</a></li> -->
+        <li><a href="{{ url_for('process_image', filename=filename, operation='binarize') }}">2値化処理</a></li>
         <li><a href="{{ url_for('process_image', filename=filename, operation='morphology') }}">モルフォロジー処理</a></li>
         <li><a href="{{ url_for('process_image', filename=filename, operation='edge') }}">エッジ検出</a></li>
     </ul>
